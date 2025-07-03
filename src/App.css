@@ -1,0 +1,75 @@
+/*body {
+    margin: 0;
+    color: #fff;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    background-image: linear-gradient(to bottom, #020917, #101725);
+}
+
+.content {
+    display: flex;
+    min-height: 100vh;
+    line-height: 1.1;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.5;
+}
+*/
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.board {
+    border-spacing: 0;
+    user-select: none;
+    border: 2px solid black;
+}
+.board td {
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    transition: background-color 0.25s, border 0.25s;
+}
+.board td.filled {
+    background: black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+.board td.knownempty {
+    background-image:
+        linear-gradient(45deg, transparent calc(50% - 2px), #555 calc(50% - 2px), #555 calc(50% + 2px), transparent calc(50% + 2px)),
+        linear-gradient(-45deg, transparent calc(50% - 2px), #555 calc(50% - 2px), #555 calc(50% + 2px), transparent calc(50% + 2px));
+    background-size: 66% 66%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.board th {
+    cursor: default;
+}
+.board > thead th {
+    vertical-align: bottom;
+}
+.board > thead th > div {
+    margin: 0.25em 0;
+}
+.board > tbody th {
+    text-align: right;
+}
+.board > tbody th > span {
+    padding: 0 0.25em;
+}
+.board > tbody > tr:hover > th, .board th.colhover {
+    background: #EE8;
+}
